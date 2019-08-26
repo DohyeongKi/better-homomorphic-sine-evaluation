@@ -1,6 +1,6 @@
 ﻿# better-homomorphic-sine-evaluation
 
-This program aims to find an approximate polynomial of sine function (In fact, we approximate the functinon $\cos (2\pi x)$, but there is no big difference). Homomorphic evaluation of sine function is the key part of bootstrapping for HEAAN, and we suggest the bootstrapping optimized way to approximate sine function by a polynomial in the paper "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf). 
+This program aims to find an approximate polynomial of sine function (In fact, we approximate the functinon ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29), but there is no big difference). Homomorphic evaluation of sine function is the key part of bootstrapping for HEAAN, and we suggest the bootstrapping optimized way to approximate sine function by a polynomial in the paper "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf). 
 
 
 
@@ -50,7 +50,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 |-0.250977|-0.00613588|-0.00613588|7.01431E-09|-27.0871|
 |-0.250938|-0.00589045|-0.00589045|6.73471E-09|-27.1457|
 |-0.250937|-0.00564502|-0.00564501|6.45502E-09|-27.2069|
-|$\vdots$ |$\vdots$   |$\vdots$   |$\vdots$   |$\vdots$|
+|... |... |... |...   |...|
 
 
 #### (2) Coefficients    
@@ -66,6 +66,6 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 |0.451401|-0.0301473|-0.906402|-0.0158559|0.394436|-0.00718066|-0.138797|-0.00200036|
 |0.0281924|-0.00196015|-0.0162168|-0.000480076|0.000828514|-6.78823E-05| -0.000500756|0|
 
-Let $q_i(x)$ $(i=1,2,3,4)$ be a polynomial corresponded to $i$th row.
-For example, $q_1(x) = 0.0292182 - 0.131917 x -0.295158 x^2 + \cdots -0.0222439 x^7$. 
-Then, the approximate polynomial $p(x)$ is given by $p(x) = q_1(x) + q_2(x)\cdot T_8(x) + (q_3(x) + q_4(x) \cdot T_8(x)) \cdot T_{16}(x)$, where $T_i(x)$ is the adjusted chebyshev polynomial of deg $i$.
+Let ![](http://latex.codecogs.com/gif.latex?q_i%28x%29) ![](http://latex.codecogs.com/gif.latex?%24%28i%3D1%2C2%2C3%2C4%29%24) be a polynomial corresponded to ith row.
+For example, ![](http://latex.codecogs.com/gif.latex?q_1%28x%29%20%3D%200.0292182%20-%200.131917%20x%20-0.295158%20x%5E2%20&plus;%20%5Ccdots%20-0.0222439%20x%5E7). 
+Then, the approximate polynomial ![](http://latex.codecogs.com/gif.latex?p%28x%29) is given by ![](http://latex.codecogs.com/gif.latex?p%28x%29%20%3D%20q_1%28x%29%20&plus;%20q_2%28x%29%5Ccdot%20T_8%28x%29%20&plus;%20%28q_3%28x%29%20&plus;%20q_4%28x%29%20%5Ccdot%20T_8%28x%29%29%20%5Ccdot%20T_%7B16%7D%28x%29), where ![](http://latex.codecogs.com/gif.latex?T_i%28x%29) is the adjusted chebyshev polynomial of deg i.
