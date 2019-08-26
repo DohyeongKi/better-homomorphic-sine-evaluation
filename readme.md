@@ -1,6 +1,6 @@
 ﻿# better-homomorphic-sine-evaluation
 
-This program aims to find an approximate polynomial of sine function (In fact, we approximate the functinon ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29), but there is no big difference). Homomorphic evaluation of sine function is the key part of bootstrapping for HEAAN, and we suggest the bootstrapping optimized way to approximate sine function by a polynomial in the paper "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf). 
+This program aims to find an approximate polynomial of sine function for bootstrapping for HEAAN(In fact, we approximate the functinon ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29), but there is no big difference). Homomorphic evaluation of sine function is the key part of bootstrapping for HEAAN, and we suggest the bootstrapping optimized way to approximate sine function by a polynomial in the paper "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf). 
 
 
 
@@ -10,28 +10,29 @@ It is written in C++ and requires NTL library (with GMP).
 You can download each library at 
  - NTL : https://www.shoup.net/ntl/doc/tour.html.
  - GMP : https://gmplib.org/
+
 We checked that the program properly works on Ubuntu 18.04.1 LTS with the libraries NTL(ver. 11.3.2) and GMP(ver. 6.1.2)
 
 ## How to use it?
 
 First, you can make "Makefile" by typing "cmake .".
 
-Then, type "make all" to get the executable file "find_polynomial". 
+Next, type "make all" and obtain the executable file "find_polynomial". 
 
 You can use the executable file by typing "./find_polynomial 'Degree '
 'Error' 'Scaling'". 
 
-You should type integers for each argument, and each argument has following meaning.
+You should put integer for each argument, and each argument has following meaning.
 
  - Degree : degree bound of interpolation polynomial 
  - Error : ![](http://latex.codecogs.com/gif.latex?-%5Clog_2) of maximum deviation of test values from each i-0.25
  - Scaling :  the number of scaling
  
-(Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more detail)
+[Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more detail]
 
 For example, you can type "./find_polynomial 30 10 2"
 
-In summary, you should type following commands.
+In summary, you should type following commands on terminal.
  1. Type "cmake .". 
  2. Type "make all".
  3. Type "./find_polynomial 'degree' 'error' 'scaling'" 
@@ -46,13 +47,13 @@ In summary, you should type following commands.
 
  - Degree of the polynomial : the degree of the interpolation polynomial of ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29).
  - Degree : Deg[i] is the number of nodes in ![](http://latex.codecogs.com/gif.latex?I_i%20%3D%20%5Bi-0.25-e%2C%20i-0.25&plus;e%5D).
- - Max_Error : log_2 of maximum error of the value of interpolation polynomial computed through Baby step Giant step algorithm.
+ - Max_Error : log_2 of maximum error of the interpolation polynomial computed through Bs-GS algorithm.
 
 
 ### 2. The result stored in files
 
 #### (1) Errors
-The errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and the approximate polynomial on various tested values  are stored in the directory "result/error/".
+The errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and the approximate polynomial on various tested values are stored in the directory "result/error/".
 
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put.
 
@@ -67,7 +68,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 
 
 #### (2) Coefficients    
-The coefficients for Baby step Giant step introduced in the paper, which is needed for implementing bootstrapping for HEAAN are stored in the directory "result/coef".
+The coefficients for Baby-step Giant-step algorithm introduced in the paper, which is needed for implementing bootstrapping for HEAAN, are stored in the directory "result/coef/".
 
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put.
 
@@ -80,7 +81,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 |0.451401|-0.0301473|-0.906402|-0.0158559|0.394436|-0.00718066|-0.138797|-0.00200036|
 |0.0281924|-0.00196015|-0.0162168|-0.000480076|0.000828514|-6.78823E-05| -0.000500756|0|
 
-Let ![](http://latex.codecogs.com/gif.latex?q_i%28x%29) ![](http://latex.codecogs.com/gif.latex?%24%28i%3D1%2C2%2C3%2C4%29%24) be a polynomial corresponded to ith row.
+Let ![](http://latex.codecogs.com/gif.latex?q_i%28x%29) ![](http://latex.codecogs.com/gif.latex?%24%28i%3D1%2C2%2C3%2C4%29%24) be a polynomial corresponding to ith row.
 
 For example, ![](http://latex.codecogs.com/gif.latex?q_1%28x%29%20%3D%200.0292182%20-%200.131917%20x%20-0.295158%20x%5E2%20&plus;%20%5Ccdots%20-0.0222439%20x%5E7). 
 
