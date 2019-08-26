@@ -40,6 +40,13 @@ In summary, you should type following commands.
 ## How to interpret the result?
 ### 1. The result printed on terminal. 
 
+[Example]
+
+![](https://user-images.githubusercontent.com/30550389/63686143-1b1d2a80-c83c-11e9-9769-1ab1bcbb8ceb.png)
+
+ - Degree of the polynomial : the degree of the interpolation polynomial of ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29).
+ - Degree : Deg[i] is the number of nodes in ![](http://latex.codecogs.com/gif.latex?I_i%20%3D%20%5Bi-0.25-e%2C%20i-0.25&plus;e%5D).
+ - Max_Error : log_2 of maximum error of the value of interpolation polynomial computed through Baby step Giant step algorithm.
 
 
 ### 2. The result stored in files
