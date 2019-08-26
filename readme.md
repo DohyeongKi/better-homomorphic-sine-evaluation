@@ -55,7 +55,7 @@ In summary, you should type following commands on terminal.
 #### (1) Errors
 The errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and the approximate polynomial on various tested values are stored in the directory "result/error/".
 
-The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put.
+The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put in.
 
 [Example]
 
@@ -70,7 +70,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 #### (2) Coefficients    
 The coefficients for Baby-step Giant-step algorithm introduced in the paper, which is needed for implementing bootstrapping for HEAAN, are stored in the directory "result/coef/".
 
-The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put.
+The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put in.
 
 [Example]
 
