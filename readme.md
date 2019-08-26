@@ -50,12 +50,13 @@ The errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put.
 
 [Example]
-|Tested Values|Real Values|Approximate Values|Error| log_2 of Error|
-|--|--|--|--|--|
+
+|Tested Values|Real Values|Approximate Values|Error|log_2 of Error|
+|--       |--         |--         |--         |--      |
 |-0.250977|-0.00613588|-0.00613588|7.01431E-09|-27.0871|
 |-0.250938|-0.00589045|-0.00589045|6.73471E-09|-27.1457|
 |-0.250937|-0.00564502|-0.00564501|6.45502E-09|-27.2069|
-|... |... |... |...   |...|
+|...      |...        |...        |...        |...     |
 
 
 #### (2) Coefficients    
