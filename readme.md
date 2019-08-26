@@ -81,7 +81,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 |0.451401|-0.0301473|-0.906402|-0.0158559|0.394436|-0.00718066|-0.138797|-0.00200036|
 |0.0281924|-0.00196015|-0.0162168|-0.000480076|0.000828514|-6.78823E-05| -0.000500756|0|
 
-Let ![](http://latex.codecogs.com/gif.latex?q_i%28x%29) ![](http://latex.codecogs.com/gif.latex?%24%28i%3D1%2C2%2C3%2C4%29%24) be a polynomial corresponding to ith row.
+Let ![](http://latex.codecogs.com/gif.latex?q_i%28x%29) ![](http://latex.codecogs.com/gif.latex?%24%28i%3D1%2C2%2C3%2C4%29%24) be a polynomial corresponding to i-th row.
 
 For example, ![](http://latex.codecogs.com/gif.latex?q_1%28x%29%20%3D%200.0292182%20-%200.131917%20x%20-0.295158%20x%5E2%20&plus;%20%5Ccdots%20-0.0222439%20x%5E7). 
 
