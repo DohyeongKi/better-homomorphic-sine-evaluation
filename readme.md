@@ -20,7 +20,7 @@ You can use the executable file by typing "./find_polynomial 'Degree '
 'Error' 'Scaling'". 
 You should type integers for each argument, and each argument has following meaning.
  - Degree : degree bound of interpolation polynomial 
- - Error : $-\log_2$ of maximum deviation of test values from each $i-0.25$
+ - Error : ![](http://latex.codecogs.com/gif.latex?-%5Clog_2) of maximum deviation of test values from each i-0.25
  - Scaling :  the number of scaling
  
 (Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more detail)
