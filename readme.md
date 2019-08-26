@@ -14,11 +14,15 @@ We checked that the program properly works on Ubuntu 18.04.1 LTS with the librar
 
 ## How to use it?
 
-First, you can make "Makefile" by typing "cmake .".  
+First, you can make "Makefile" by typing "cmake .".
+
 Then, type "make all" to get the executable file "find_polynomial". 
+
 You can use the executable file by typing "./find_polynomial 'Degree '
 'Error' 'Scaling'". 
+
 You should type integers for each argument, and each argument has following meaning.
+
  - Degree : degree bound of interpolation polynomial 
  - Error : ![](http://latex.codecogs.com/gif.latex?-%5Clog_2) of maximum deviation of test values from each i-0.25
  - Scaling :  the number of scaling
@@ -42,6 +46,7 @@ In summary, you should type following commands.
 
 #### (1) Errors
 The errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and the approximate polynomial on various tested values  are stored in the directory "result/error/".
+
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put.
 
 [Example]
@@ -55,6 +60,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 
 #### (2) Coefficients    
 The coefficients for Baby step Giant step introduced in the paper, which is needed for implementing bootstrapping for HEAAN are stored in the directory "result/coef".
+
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put.
 
 [Example]
@@ -67,5 +73,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 |0.0281924|-0.00196015|-0.0162168|-0.000480076|0.000828514|-6.78823E-05| -0.000500756|0|
 
 Let ![](http://latex.codecogs.com/gif.latex?q_i%28x%29) ![](http://latex.codecogs.com/gif.latex?%24%28i%3D1%2C2%2C3%2C4%29%24) be a polynomial corresponded to ith row.
+
 For example, ![](http://latex.codecogs.com/gif.latex?q_1%28x%29%20%3D%200.0292182%20-%200.131917%20x%20-0.295158%20x%5E2%20&plus;%20%5Ccdots%20-0.0222439%20x%5E7). 
+
 Then, the approximate polynomial ![](http://latex.codecogs.com/gif.latex?p%28x%29) is given by ![](http://latex.codecogs.com/gif.latex?p%28x%29%20%3D%20q_1%28x%29%20&plus;%20q_2%28x%29%5Ccdot%20T_8%28x%29%20&plus;%20%28q_3%28x%29%20&plus;%20q_4%28x%29%20%5Ccdot%20T_8%28x%29%29%20%5Ccdot%20T_%7B16%7D%28x%29), where ![](http://latex.codecogs.com/gif.latex?T_i%28x%29) is the adjusted chebyshev polynomial of deg i.
