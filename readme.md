@@ -39,7 +39,7 @@ In summary, you should type following commands on terminal.
 
 
 ## How to interpret the result?
-### 1. The result printed on terminal. 
+### 1. The result printed on terminal
 
 [Example]
 
