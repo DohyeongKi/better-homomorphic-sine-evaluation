@@ -1,6 +1,6 @@
 ﻿# better-homomorphic-sine-evaluation
 
-This program aims to find an approximate polynomial of sine function for bootstrapping for HEAAN(In fact, we approximate the functinon ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29), but there is no big difference). Homomorphic evaluation of sine function is the key part of bootstrapping for HEAAN, and we suggest the bootstrapping optimized way to approximate sine function by a polynomial in the paper "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf). 
+This program aims to find an approximate polynomial of sine function for bootstrapping for HEAAN (In fact, we approximate the functinon ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29), but there is no big difference). Homomorphic evaluation of sine function is the key part of bootstrapping for HEAAN, and we suggest the bootstrapping optimized way to approximate sine function by a polynomial in the paper "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf). 
 
 
 
