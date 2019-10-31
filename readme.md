@@ -45,15 +45,15 @@ In summary, you should type the following commands on terminal.
 
 ![](https://user-images.githubusercontent.com/30550389/63686143-1b1d2a80-c83c-11e9-9769-1ab1bcbb8ceb.png)
 
- - Degree of the polynomial : the degree of the interpolation polynomial of ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29).
+ - Degree of polynomial : degree of an interpolation polynomial of ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29).
  - Degree : Deg[i] is the number of nodes in ![](http://latex.codecogs.com/gif.latex?I_i%20%3D%20%5Bi-0.25-e%2C%20i-0.25&plus;e%5D).
- - Max_Error : log_2 of a maximum error of the interpolation polynomial computed through the BS-GS algorithm.
+ - Max_Error : log_2 of a maximum error of an interpolation polynomial computed through the BS-GS algorithm.
 
 
 ### 2. Results stored in files
 
 #### (1) Errors
-Errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and the approximate polynomial on various tested values are stored in the directory "result/error/".
+Errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and an approximate polynomial on various tested values are stored in the directory "result/error/".
 
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put in.
 
