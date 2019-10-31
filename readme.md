@@ -22,24 +22,24 @@ Next, type "make all" and obtain the executable file "find_polynomial".
 You can use the executable file by typing "./find_polynomial 'Degree '
 'Error' 'Scaling'". 
 
-You should put integer for each argument, and each argument has following meaning.
+You should put integer for each argument, and each argument has the following meaning.
 
  - Degree : degree bound of interpolation polynomial 
  - Error : ![](http://latex.codecogs.com/gif.latex?-%5Clog_2) of maximum deviation of test values from each i-0.25
  - Scaling :  the number of scaling
  
-[Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more detail]
+[Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more details]
 
 For example, you can type "./find_polynomial 30 10 2"
 
-In summary, you should type following commands on terminal.
+In summary, you should type the following commands on terminal.
  1. Type "cmake .". 
  2. Type "make all".
  3. Type "./find_polynomial 'degree' 'error' 'scaling'" 
 
 
-## How to interpret the result?
-### 1. The result printed on terminal
+## How to interpret a result?
+### 1. A result printed on terminal
 
 [Example]
 
@@ -47,13 +47,13 @@ In summary, you should type following commands on terminal.
 
  - Degree of the polynomial : the degree of the interpolation polynomial of ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29).
  - Degree : Deg[i] is the number of nodes in ![](http://latex.codecogs.com/gif.latex?I_i%20%3D%20%5Bi-0.25-e%2C%20i-0.25&plus;e%5D).
- - Max_Error : log_2 of maximum error of the interpolation polynomial computed through Bs-GS algorithm.
+ - Max_Error : log_2 of a maximum error of the interpolation polynomial computed through the BS-GS algorithm.
 
 
-### 2. The result stored in files
+### 2. Results stored in files
 
 #### (1) Errors
-The errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and the approximate polynomial on various tested values are stored in the directory "result/error/".
+Errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and the approximate polynomial on various tested values are stored in the directory "result/error/".
 
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put in.
 
@@ -68,7 +68,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 
 
 #### (2) Coefficients    
-The coefficients for Baby-step Giant-step algorithm introduced in the paper, which is needed for implementing bootstrapping for HEAAN, are stored in the directory "result/coef/".
+Coefficients for the Baby-step Giant-step algorithm introduced in the paper, which is needed for implementing the bootstrapping for HEAAN, are stored in the directory "result/coef/".
 
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put in.
 
