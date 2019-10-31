@@ -38,7 +38,7 @@ In summary, you should type the following commands on terminal.
  3. Type "./find_polynomial 'degree' 'error' 'scaling'" 
 
 
-## How to interpret a result?
+## How to interpret results?
 ### 1. A result printed on terminal
 
 [Example]
