@@ -24,11 +24,13 @@ You can use the executable file by typing "./find_polynomial 'Degree '
 
 You should put integer for each argument, and each argument has the following meaning.
 
+
 Degree : degree bound of interpolation polynomial 
 
 Error : $- \log$ (base 2) of maximum deviation of test values from each $i-0.25$
 
 Scaling :  the number of scaling
+ 
  
 [Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more details]
 
