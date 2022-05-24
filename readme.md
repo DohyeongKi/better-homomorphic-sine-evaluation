@@ -24,9 +24,9 @@ You can use the executable file by typing "./find_polynomial 'Degree '
 
 You should put integer for each argument, and each argument has the following meaning.
 
- - Degree : degree bound of interpolation polynomial 
- - Error : $- \log$ (base 2) of maximum deviation of test values from each $i-0.25$
- - Scaling :  the number of scaling
+Degree : degree bound of interpolation polynomial 
+Error : $- \log$ (base 2) of maximum deviation of test values from each $i-0.25$
+Scaling :  the number of scaling
  
 [Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more details]
 
@@ -59,7 +59,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 
 [Example]
 
-|Tested Values|Real Values|Approximate Values|Error|$\log$ of Error|
+|Tested Values|Real Values|Approximate Values|Error|log of Error|
 |--       |--         |--         |--         |--      |
 |-0.250977|-0.00613588|-0.00613588|7.01431E-09|-27.0871|
 |-0.250938|-0.00589045|-0.00589045|6.73471E-09|-27.1457|
