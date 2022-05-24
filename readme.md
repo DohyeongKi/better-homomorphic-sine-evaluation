@@ -25,7 +25,9 @@ You can use the executable file by typing "./find_polynomial 'Degree '
 You should put integer for each argument, and each argument has the following meaning.
 
 Degree : degree bound of interpolation polynomial 
+
 Error : $- \log$ (base 2) of maximum deviation of test values from each $i-0.25$
+
 Scaling :  the number of scaling
  
 [Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more details]
@@ -45,9 +47,11 @@ In summary, you should type the following commands on terminal.
 
 ![](https://user-images.githubusercontent.com/30550389/63686143-1b1d2a80-c83c-11e9-9769-1ab1bcbb8ceb.png)
 
- - Degree of polynomial : degree of an interpolation polynomial of $\cos(2 \pi x)$.
- - Degree : Deg[i] is the number of nodes in $I_{i} = \left[i - 0.25 - e, i - 0.25 + e \right]$.
- - Max_Error : $\log$ of a maximum error of an interpolation polynomial computed through the BS-GS algorithm.
+Degree of polynomial : degree of an interpolation polynomial of $\cos(2 \pi x)$.
+ 
+Degree : Deg[i] is the number of nodes in $I_{i} = \left[i - 0.25 - e, i - 0.25 + e \right]$.
+ 
+Max_Error : $\log$ of a maximum error of an interpolation polynomial computed through the BS-GS algorithm.
 
 
 ### 2. Results stored in files
