@@ -1,6 +1,6 @@
 ﻿# better-homomorphic-sine-evaluation
 
-This program aims to find an approximate polynomial of a sine function for the bootstrapping for HEAAN (In fact, we approximate the function ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29), but there is no big difference). Homomorphic evaluation of a sine function is the key part of the bootstrapping for HEAAN, and we suggest the bootstrapping optimized way to approximate a sine function by a polynomial in the paper "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf). 
+This program aims to find an approximate polynomial of a sine function for the bootstrapping for HEAAN (In fact, we approximate the function $\cos(2 \pi x)$, but there is no big difference). Homomorphic evaluation of a sine function is the key part of the bootstrapping for HEAAN, and we suggest the bootstrapping optimized way to approximate a sine function by a polynomial in the paper "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf). 
 
 
 
@@ -25,7 +25,7 @@ You can use the executable file by typing "./find_polynomial 'Degree '
 You should put integer for each argument, and each argument has the following meaning.
 
  - Degree : degree bound of interpolation polynomial 
- - Error : ![](http://latex.codecogs.com/gif.latex?-%5Clog_2) of maximum deviation of test values from each i-0.25
+ - Error : $- \log_{2}$ of maximum deviation of test values from each i-0.25
  - Scaling :  the number of scaling
  
 [Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more details]
@@ -45,21 +45,21 @@ In summary, you should type the following commands on terminal.
 
 ![](https://user-images.githubusercontent.com/30550389/63686143-1b1d2a80-c83c-11e9-9769-1ab1bcbb8ceb.png)
 
- - Degree of polynomial : degree of an interpolation polynomial of ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29).
- - Degree : Deg[i] is the number of nodes in ![](http://latex.codecogs.com/gif.latex?I_i%20%3D%20%5Bi-0.25-e%2C%20i-0.25&plus;e%5D).
+ - Degree of polynomial : degree of an interpolation polynomial of $\cos(2 \pi x)$.
+ - Degree : Deg[i] is the number of nodes in $I_{i} = [i - 0.25 - e, i - 0.25 + e]$.
  - Max_Error : log_2 of a maximum error of an interpolation polynomial computed through the BS-GS algorithm.
 
 
 ### 2. Results stored in files
 
 #### (1) Errors
-Errors between ![](http://latex.codecogs.com/gif.latex?%5Ccos%282%20%5Cpi%20x%29) and an approximate polynomial on various tested values are stored in the directory "result/error/".
+Errors between $\cos(2 \pi x)$ and an approximate polynomial on various tested values are stored in the directory "result/error/".
 
 The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv", where xx's are argument values you put in.
 
 [Example]
 
-|Tested Values|Real Values|Approximate Values|Error|log_2 of Error|
+|Tested Values|Real Values|Approximate Values|Error|$\log_{2}$ of Error|
 |--       |--         |--         |--         |--      |
 |-0.250977|-0.00613588|-0.00613588|7.01431E-09|-27.0871|
 |-0.250938|-0.00589045|-0.00589045|6.73471E-09|-27.1457|
@@ -81,8 +81,8 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 |0.451401|-0.0301473|-0.906402|-0.0158559|0.394436|-0.00718066|-0.138797|-0.00200036|
 |0.0281924|-0.00196015|-0.0162168|-0.000480076|0.000828514|-6.78823E-05| -0.000500756|0|
 
-Let ![](http://latex.codecogs.com/gif.latex?q_i%28x%29) ![](http://latex.codecogs.com/gif.latex?%24%28i%3D1%2C2%2C3%2C4%29%24) be a polynomial corresponding to i-th row.
+Let $q_{i} (x)$ be a polynomial corresponding to $i$-th row.
 
-For example, ![](http://latex.codecogs.com/gif.latex?q_1%28x%29%20%3D%200.0292182%20-%200.131917%20x%20-0.295158%20x%5E2%20&plus;%20%5Ccdots%20-0.0222439%20x%5E7). 
+For example, $q_{i} (x) = 0022182 - 1.131172 x - 0.285158 x^{2} + \cdots - 0.0222439 x^{7}$. 
 
-Then, the approximate polynomial ![](http://latex.codecogs.com/gif.latex?p%28x%29) is given by ![](http://latex.codecogs.com/gif.latex?p%28x%29%20%3D%20q_1%28x%29%20&plus;%20q_2%28x%29%5Ccdot%20T_8%28x%29%20&plus;%20%28q_3%28x%29%20&plus;%20q_4%28x%29%20%5Ccdot%20T_8%28x%29%29%20%5Ccdot%20T_%7B16%7D%28x%29), where ![](http://latex.codecogs.com/gif.latex?T_i%28x%29) is the adjusted chebyshev polynomial of deg i.
+Then, the approximate polynomial $p(x)$ is given by $p(x) = q_{1}(x) + q_{2}(x) T_{8}(x) + (q_{3}(x) + q_{4}(x) T_{8}(x)) T_{16}(x)$, where $T_{i}(x)$ is the adjusted chebyshev polynomial of deg $i$.
