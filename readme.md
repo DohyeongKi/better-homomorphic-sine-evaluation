@@ -25,7 +25,7 @@ You can use the executable file by typing "./find_polynomial 'Degree '
 You should put integer for each argument, and each argument has the following meaning.
 
  - Degree : degree bound of interpolation polynomial 
- - Error : $- \log_{2}$ of maximum deviation of test values from each i-0.25
+ - Error : $- \log$ (base 2) of maximum deviation of test values from each $i-0.25$
  - Scaling :  the number of scaling
  
 [Refer to "Better Bootstrapping for Approximate Homomorphic Encryption" (https://eprint.iacr.org/2019/688.pdf) for more details]
@@ -46,8 +46,8 @@ In summary, you should type the following commands on terminal.
 ![](https://user-images.githubusercontent.com/30550389/63686143-1b1d2a80-c83c-11e9-9769-1ab1bcbb8ceb.png)
 
  - Degree of polynomial : degree of an interpolation polynomial of $\cos(2 \pi x)$.
- - Degree : Deg[i] is the number of nodes in $I_{i} = [i - 0.25 - e, i - 0.25 + e]$.
- - Max_Error : log_2 of a maximum error of an interpolation polynomial computed through the BS-GS algorithm.
+ - Degree : Deg[i] is the number of nodes in $I_{i} = \left[i - 0.25 - e, i - 0.25 + e \right]$.
+ - Max_Error : $\log$ of a maximum error of an interpolation polynomial computed through the BS-GS algorithm.
 
 
 ### 2. Results stored in files
@@ -59,7 +59,7 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 
 [Example]
 
-|Tested Values|Real Values|Approximate Values|Error|$\log_{2}$ of Error|
+|Tested Values|Real Values|Approximate Values|Error|$\log$ of Error|
 |--       |--         |--         |--         |--      |
 |-0.250977|-0.00613588|-0.00613588|7.01431E-09|-27.0871|
 |-0.250938|-0.00589045|-0.00589045|6.73471E-09|-27.1457|
@@ -83,6 +83,6 @@ The file is of .csv format, and its name is the form of "DegxxErrxxScalingxx.csv
 
 Let $q_{i} (x)$ be a polynomial corresponding to $i$-th row.
 
-For example, $q_{i} (x) = 0022182 - 1.131172 x - 0.285158 x^{2} + \cdots - 0.0222439 x^{7}$. 
+For example, $q_{i} (x) = 0.0292182 - 0.131917 x - 0.295158 x^{2} + \cdots - 0.0222439 x^{7}$. 
 
-Then, the approximate polynomial $p(x)$ is given by $p(x) = q_{1}(x) + q_{2}(x) T_{8}(x) + (q_{3}(x) + q_{4}(x) T_{8}(x)) T_{16}(x)$, where $T_{i}(x)$ is the adjusted chebyshev polynomial of deg $i$.
+Then, the approximate polynomial $p(x)$ is given by $p(x) = q_{1}(x) + q_{2}(x) \cdot T_{8}(x) + (q_{3}(x) + q_{4}(x) \cdot T_{8}(x)) \cdot T_{16}(x)$, where $T_{i} (x)$ is the adjusted chebyshev polynomial of deg $i$.
